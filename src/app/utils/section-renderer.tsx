@@ -9,6 +9,7 @@ import TitleWithPicture from "../components/TitleWithPicture";
 import SmallGalery from "../components/SmallGalery";
 import Galery from "../components/Galery";
 import RichText from "../components/RichText";
+import LogoClouds from "../components/LogoClouds";
 
 export function sectionRenderer(section: any, index: number) {
     console.log(section);
@@ -27,6 +28,8 @@ export function sectionRenderer(section: any, index: number) {
             return <TitleWithPicture key={index} data={section} />;
         case "sections.small-galery":
             return <SmallGalery key={index} data={section} />;
+        case "sections.logo-clouds":
+            return <LogoClouds key={index} data={section} />;
         case "sections.galery":
             return <Galery key={index} data={section} />;
         case "sections.google-map-element":

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-      async redirects() {
+    async redirects() {
         return [
             {
                 source: "/",
@@ -14,7 +14,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "http",
-                hostname: "willalasak.usermd.net",
+                hostname: "localhost",
                 port: "1337",
                 pathname: "/uploads/**",
             },

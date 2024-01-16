@@ -28,7 +28,7 @@ export default function Map({ data }: MapProps) {
         <section className="my-10 overflow-hidden container mx-auto justify-center">
             <div className="w-[100%] h-[90vh] sm:h-[50vh] mx-auto">
                 {data.title && (
-                    <h1 className="text-2xl font-semibold leading-none text-center mb-5">
+                    <h1 className="text-5xl font-bold leading-none text-center mb-5">
                         {data.title}
                     </h1>
                 )}

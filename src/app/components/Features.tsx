@@ -76,7 +76,7 @@ function Feature({
 export default function Features({ data }: FeaturesProps) {
     console.log(data);
     return (
-        <section className="px-6 m:py-12 lg:py-24">
+        <section className="px-6 m:py-12 lg:py-12">
             <div className="container mx-auto py-4 space-y-2 text-center">
                 <h2 className="text-5xl font-bold">{data.heading}</h2>
                 <p>{data.description}</p>
