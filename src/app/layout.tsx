@@ -6,6 +6,7 @@ import { fetchAPI } from "./utils/fetch-api";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Modal from "./components/Modal";
 
 async function getGlobal(): Promise<any> {
     const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -35,6 +36,10 @@ async function getGlobal(): Promise<any> {
             "footer.subtitle",
             "footer.legalLinks",
             "footer.socialLinks",
+            "modal.title",
+            "modal.description",
+            "modal.button",
+            "modal.picture",
         ],
     };
     return await fetchAPI(path, urlParamsObject, options);
@@ -66,7 +71,8 @@ export default async function RootLayout({
     // TODO: CREATE A CUSTOM ERROR PAGE
     if (!global.data) return null;
 
-    const { notificationBanner, navbar, footer } = global.data.attributes;
+    const { notificationBanner, navbar, footer, modal } =
+        global.data.attributes;
 
     const navbarLogoUrl = getStrapiMedia(
         navbar.navbarLogo.logoImg.data.attributes.url
@@ -79,6 +85,8 @@ export default async function RootLayout({
     const footerLogoUrl = getStrapiMedia(
         footer.footerLogo.logoImg.data.attributes.url
     );
+
+    const modalLogoUrl = getStrapiMedia(modal.picture.data.attributes.url);
 
     return (
         <html>
@@ -112,7 +120,12 @@ export default async function RootLayout({
                 />
 
                 <main className="min-h-screen">{children}</main>
-
+                <Modal
+                    picture={modalLogoUrl}
+                    title={modal.title}
+                    description={modal.description}
+                    button={modal.button.text}
+                />
                 <Banner data={notificationBanner} />
 
                 <Footer

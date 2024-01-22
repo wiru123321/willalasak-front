@@ -128,3 +128,8 @@
 .react-slideshow-container [aria-label="Next Slide"] {
     margin-right: 1rem;
 }
+
+.lock-body-scroll {
+    overflow: hidden;
+    width: 100%;
+}
