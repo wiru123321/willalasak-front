@@ -38,7 +38,6 @@ const normalButton =
 
 export default function Galery({ data }: GaleryProps) {
     const [selectedType, setSelectedType] = useState("Wszystkie");
-    console.log(data.pictures);
     return (
         <section className="mb-10 overflow-hidden container mx-auto justify-center">
             <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">

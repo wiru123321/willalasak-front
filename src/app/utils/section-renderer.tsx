@@ -12,7 +12,6 @@ import RichText from "../components/RichText";
 import LogoClouds from "../components/LogoClouds";
 
 export function sectionRenderer(section: any, index: number) {
-    console.log(section);
     switch (section.__component) {
         case "sections.hero":
             return <Hero key={index} data={section} />;

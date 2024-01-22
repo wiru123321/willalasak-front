@@ -26,7 +26,6 @@ interface SmallGaleryProps {
 }
 
 export default function SmallGalery({ data }: SmallGaleryProps) {
-    console.log(data.pictures.data);
     return (
         <section className="mb-10 px-6 overflow-hidden container mx-auto justify-center">
             <div className="container mx-auto py-4 space-y-2 text-center">

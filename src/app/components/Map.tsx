@@ -23,7 +23,6 @@ export default function Map({ data }: MapProps) {
         },
         zoom: 11,
     };
-    console.log(data.title);
     return (
         <section className="my-10 overflow-hidden container mx-auto justify-center">
             <div className="w-[100%] h-[90vh] sm:h-[50vh] mx-auto">

@@ -74,7 +74,6 @@ function Feature({
 }
 
 export default function Features({ data }: FeaturesProps) {
-    console.log(data);
     return (
         <section className="px-6 m:py-12 lg:py-12">
             <div className="container mx-auto py-4 space-y-2 text-center">
